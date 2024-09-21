@@ -17,7 +17,7 @@ import neige from '@/public/assets/neige.jpg';
 import brume from '@/public/assets/brume.jpg';
 import pluielegere from '@/public/assets/pluielegere.jpg';
 import cielnuageux from '@/public/assets/cielnuageux.jpg';
-import { transform } from 'next/dist/build/swc';
+
 
 export default function Home() {
 
@@ -77,10 +77,10 @@ export default function Home() {
   };
 
   const contentContainerStyle = {
-    
+
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center',
     flexGrow: 1,
   };
