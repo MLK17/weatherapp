@@ -77,10 +77,10 @@ export default function Home() {
   };
 
   const contentContainerStyle = {
-    
+
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center', 
+    justifyContent: 'center',
     alignItems: 'center',
     flexGrow: 1,
   };
