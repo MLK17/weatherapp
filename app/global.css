@@ -1,0 +1,94 @@
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+    .search-bar {
+        width: calc(80% - 60px);
+    }
+    .nav-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .navbar-brand{
+        transform: translateX(10px);
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+    .search-bar {
+        width: calc(80% - 60px);
+    }
+    .nav-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .navbar-brand{
+        transform: translateX(10px);
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+    .search-bar {
+        width: calc(80% - 60px);
+    }
+    .nav-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .navbar-brand{
+        transform: translateX(10px);
+    }
+}
+
+
+@media only screen and (min-width: 992px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+    .search-bar {
+        width: calc(80% - 60px);
+    }
+    .nav-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .navbar-brand{
+        transform: translateX(10px);
+    }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    .card {
+        width: 100%;
+        max-width: 100%;
+    }
+    .search-bar {
+        width: calc(80% - 60px);
+    }
+    .nav-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .navbar-brand{
+        transform: translateX(10px);
+    }
+}
