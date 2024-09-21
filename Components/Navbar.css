@@ -1,0 +1,19 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom,#ececece0 25%,#ececece0 30%,#ecececbc 50%,  #ececec6d 75%, rgba(255, 255, 255, 0) 100%);
+    height: 80px; 
+        
+}
+
+.navbar-brand{
+  
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+    transform: translateX(10px);
+    transform: translateY(-10px);
+}
+
