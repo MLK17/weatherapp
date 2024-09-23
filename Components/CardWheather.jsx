@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Loader from './Loader'; // Assurez-vous que le chemin est correct
+import Loader from './Loader'; 
 import './CardWheather.css';
 
 const translateDescription = (description) => {
@@ -53,7 +53,7 @@ const WeatherCard = ({ updateBackgroundImage }) => {
         displayWeather(data);
         setTimeout(() => {
           setIsLoading(false);
-        }, 1300); // Ajout d'un délai de 1,30 seconde
+        }, 1300); 
       })
       .catch((error) => {
         setError("Cette ville n'existe pas, fait un effort et écrit correctement le nom de la ville");
@@ -78,7 +78,7 @@ const WeatherCard = ({ updateBackgroundImage }) => {
       icon: `https://openweathermap.org/img/wn/${icon}.png`,
     });
 
-    // Appelle la fonction de mise à jour du background depuis le parent
+   
     updateBackgroundImage(translatedDescription);
   };
 
