@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Shrikhand&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
 
 .outer {
   align-items: center;
@@ -7,22 +7,30 @@
   display: flex;
   width: 400px;
   border-radius: 16px;
-  background: radial-gradient(circle 1000px at 0% 0%, #0c0d0d, #ffffff7b);
+  background: radial-gradient(circle 1000px at 0% 0%, rgba(12, 13, 13, 0.9), rgba(255, 255, 255, 0.2)); /* Augmenté pour moins de transparence */
   position: relative;
+  margin-top: -100px; /* Monte le composant de 100 pixels */
 }
-
 
 .card {
   padding: 20px;
   width: 90%;
   border-radius: 16px;
-  background: radial-gradient(circle 280px at 0% 0%, #a8abab4f, #e9e8e87d);
+  background: radial-gradient(circle 280px at 0% 0%, rgba(168, 171, 171, 0.2), rgba(233, 232, 232, 0.2)); /* Augmenté pour moins de transparence */
   display: flex;
   align-items: flex-start;
   justify-content: center;
   position: relative;
   flex-direction: column;
+  font-family: "Sofia Sans", sans-serif;
+  font-optical-sizing: auto;
   color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre initiale */
+  transition: box-shadow 0.3s ease; /* Transition pour l'effet d'agrandissement de l'ombre */
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombre agrandie au survol */
 }
 
 .ray {
@@ -47,6 +55,7 @@
 .search {
   display: flex;
   width: 350px;
+  margin-bottom: 0px; /* Réduit l'espace entre la barre de recherche et le message d'erreur de 20px */
 }
 
 .search-bar {
@@ -99,10 +108,10 @@ button:hover {
   font-weight: bolder;
 }
 
-.city{
+.city {
   padding: 5px;
-  
 }
+
 .temp, .description, .humidity, .wind {
   margin-left: 5px;
   color: #000;
@@ -111,4 +120,18 @@ button:hover {
 .description {
   font-size: 1em;
   transform: translateY(8px);
+}
+
+.error {
+  color: #ffffff; /* Tomato color for error message */
+  margin-top: 10px;
+  text-align: center;
+  transform: translateX(-8px);
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }

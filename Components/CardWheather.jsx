@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Loader from './Loader'; // Assurez-vous que le chemin est correct
 import './CardWheather.css';
 
 const translateDescription = (description) => {
@@ -32,14 +33,32 @@ const WeatherCard = ({ updateBackgroundImage }) => {
     icon: ''
   });
   const [city, setCity] = useState('Paris');
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const apiKey = "19ab687bfae649e0cd261fbad3b1594f";
 
   const fetchWeather = (city) => {
+    setIsLoading(true);
+    setError(null);
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
     )
-      .then((response) => response.json())
-      .then((data) => displayWeather(data));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => {
+        displayWeather(data);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1300); // Ajout d'un délai de 1,30 seconde
+      })
+      .catch((error) => {
+        setError("Cette ville n'existe pas, fait un effort et écrit correctement le nom de la ville");
+        setIsLoading(false);
+      });
   };
 
   const displayWeather = (data) => {
@@ -78,12 +97,12 @@ const WeatherCard = ({ updateBackgroundImage }) => {
   }, []);
 
   return (
-    
-<div class="outer">
-  
-  <div class="card">
-    <div class="ray"></div>
-        
+    <div className="outer">
+      <div className="card">
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <>
             <div className="search">
               <input
                 type="text"
@@ -99,25 +118,32 @@ const WeatherCard = ({ updateBackgroundImage }) => {
                 </svg>
               </button>
             </div>
-            <div className="weather-info">
-              <h2 className="city">Météo à {weather.city}</h2>
-              <div className= "info">
-              
-                  <div className="temp">{weather.temp}</div>
-                  <div className="flex">
-                    <img src={weather.icon} alt="weather icon" className="icon" />
-                    <div className="description">{weather.description}</div>
-                  </div>
-                  <div className="humidity">{weather.humidity}</div>
-                  <div className="wind">{weather.wind}</div>
+            {error && (
+              <div className="error-container">
+                <div className="error">{error}</div>
               </div>
-            </div>
-  
-  </div>
-</div>
-
-
-
+            )}
+            {!error && (
+              <>
+                <div className="ray"></div>
+                <div className="weather-info">
+                  <h2 className="city">Météo à {weather.city}</h2>
+                  <div className="info">
+                    <div className="temp">{weather.temp}</div>
+                    <div className="flex">
+                      <img src={weather.icon} alt="weather icon" className="icon" />
+                      <div className="description">{weather.description}</div>
+                    </div>
+                    <div className="humidity">{weather.humidity}</div>
+                    <div className="wind">{weather.wind}</div>
+                  </div>
+                </div>
+              </>
+            )}
+          </>
+        )}
+      </div>
+    </div>
   );
 };
 

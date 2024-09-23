@@ -1,5 +1,3 @@
-'use client';
-
 import React from 'react';
 import './Navbar.css';
 import Image from 'next/image';
@@ -14,11 +12,8 @@ const Navbar = () => {
           width={50} 
           height={50} 
         />
-          Wheatherapp
+        WeatherApp
       </a>
-
-
-
     </nav>
   );
 };

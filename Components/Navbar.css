@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -8,12 +13,19 @@
 }
 
 .navbar-brand{
-  
-    font-size: 1.5em;
+    
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
     font-weight: bold;
-    color: #000000;
+    color: #4f4f4f; /* Gris foncé */
     text-decoration: none;
-    transform: translateX(10px);
-    transform: translateY(-10px);
+    transform: translateX(10px) translateY(-10px);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #555; /* Gris moyen */
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 

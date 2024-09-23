@@ -2,10 +2,9 @@
 
 import React, { useState } from 'react';
 import WeatherCard from '@/components/CardWheather';
-import JoinCard from '@/components/JoinCard';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import './page2.css';
+import './page.css';
 import cielbleu from '@/public/assets/cielbleu.jpg';
 import fewnuage from '@/public/assets/fewnuage.jpg';
 import nuageparsé from '@/public/assets/nuagefragmenté.jpg';
@@ -17,7 +16,6 @@ import neige from '@/public/assets/neige.jpg';
 import brume from '@/public/assets/brume.jpg';
 import pluielegere from '@/public/assets/pluielegere.jpg';
 import cielnuageux from '@/public/assets/cielnuageux.jpg';
-import { transform } from 'next/dist/build/swc';
 
 export default function Home() {
 
@@ -76,33 +74,13 @@ export default function Home() {
     flexDirection: 'column',
   };
 
-  const contentContainerStyle = {
-    
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center', 
-    alignItems: 'center',
-    flexGrow: 1,
-  };
-
-  const cardsContainerStyle = {
-    display: 'flex',
-    flexDirection: 'row',  // Place les cartes côte à côte
-    justifyContent: 'center',
-    alignItems: 'center',
-    gap: '100px',  // Ajoute un espace entre les cartes
-  };
-
   return (
     <div className='body' style={backgroundStyle}>
-      {/* <Navbar />  */}
-      <div style={contentContainerStyle}>
-        <div style={cardsContainerStyle}>
-          {/* <WeatherCard updateBackgroundImage={updateBackgroundImage} /> */}
-          <JoinCard />
-        </div>
-        {/* < Footer /> */}
+      <Navbar />
+      <div className="main-content">
+        <WeatherCard updateBackgroundImage={updateBackgroundImage} />
       </div>
+      <Footer />
     </div>
   );
 }
