@@ -7,16 +7,16 @@
   display: flex;
   width: 400px;
   border-radius: 16px;
-  background: radial-gradient(circle 1000px at 0% 0%, rgba(12, 13, 13, 0.9), rgba(255, 255, 255, 0.2)); /* Augmenté pour moins de transparence */
+  background: radial-gradient(circle 1000px at 0% 0%, rgba(12, 13, 13, 0.9), rgba(255, 255, 255, 0.2)); 
   position: relative;
-  margin-top: -100px; /* Monte le composant de 100 pixels */
+  margin-top: -100px;
 }
 
 .card {
   padding: 20px;
   width: 90%;
   border-radius: 16px;
-  background: radial-gradient(circle 280px at 0% 0%, rgba(168, 171, 171, 0.2), rgba(233, 232, 232, 0.2)); /* Augmenté pour moins de transparence */
+  background: radial-gradient(circle 280px at 0% 0%, rgba(168, 171, 171, 0.2), rgba(233, 232, 232, 0.2)); 
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -25,12 +25,12 @@
   font-family: "Sofia Sans", sans-serif;
   font-optical-sizing: auto;
   color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre initiale */
-  transition: box-shadow 0.3s ease; /* Transition pour l'effet d'agrandissement de l'ombre */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transition: box-shadow 0.3s ease; 
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Ombre agrandie au survol */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
 }
 
 .ray {
@@ -55,7 +55,7 @@
 .search {
   display: flex;
   width: 350px;
-  margin-bottom: 0px; /* Réduit l'espace entre la barre de recherche et le message d'erreur de 20px */
+  margin-bottom: 0px; 
 }
 
 .search-bar {
@@ -123,7 +123,7 @@ button:hover {
 }
 
 .error {
-  color: #ffffff; /* Tomato color for error message */
+  color: #ffffff; 
   margin-top: 10px;
   text-align: center;
   transform: translateX(-8px);
