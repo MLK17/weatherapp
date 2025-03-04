@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import WeatherCard from '@/components/CardWheather';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import WeatherCard from '@/Components/CardWheather';
+import Navbar from '@/Components/Navbar';
+import Footer from '@/Components/Footer';
 import './page.css';
 import cielbleu from '@/public/assets/cielbleu.jpg';
 import fewnuage from '@/public/assets/fewnuage.jpg';
